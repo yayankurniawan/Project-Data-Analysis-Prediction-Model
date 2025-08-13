@@ -138,4 +138,23 @@ from sklearn import metrics
 # Import fungsi untuk analisis feature importance dari JCOPML
 from jcopml.feature_importance import mean_score_decrease
 ```
+```
+# Menampilkan semua kolom dataframe saat dipanggil atau dicetak
+pd.set_option('display.max_columns', None)
+```
 
+### Data For Prediction
+
+```
+# Path dataset utama untuk training dan eksplorasi data
+path_1 = "https://raw.githubusercontent.com/yayankurniawan/Project-Data-Analysis-Prediction-Model/main/FinanKu%20Data%20All.csv"
+
+# Path dataset untuk validasi model (data unseen)
+path_2 = "https://raw.githubusercontent.com/yayankurniawan/Project-Data-Analysis-Prediction-Model/main/FinanKu%20Data%20Validasi.csv"
+
+# Membaca dataset utama ke dalam dataframe df_all
+df_all = pd.read_csv(path_1)
+
+# Membaca dataset validasi ke dalam dataframe df_val
+df_val = pd.read_csv(path_2)
+```
